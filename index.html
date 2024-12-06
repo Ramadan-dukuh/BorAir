@@ -1,0 +1,70 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Water Drill</title>
+  </head>
+  <body>
+    <header id="header">
+      <a href="" class="logo">WaterDrill</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">Tentang Kami</a></li>
+        <li><a href="">Layanan</a></li>
+        <li><a href="">Galeri</a></li>
+        <li><a href="">Kontak</a></li>
+      </ul>
+    </header>
+    <section class="parallax" name="home" id="home">
+      <h2 id="text">
+        <span>Mau Cari Service Mesin Air dan Pengeboran Air Di</span
+        ><br />Jakarta Timur?
+      </h2>
+
+      <div class="wave" id="wave1" style="--i: 1"></div>
+      <div class="wave" id="wave2" style="--i: 2"></div>
+      <div class="wave" id="wave3" style="--i: 3"></div>
+      <div class="wave" id="wave4" style="--i: 4"></div>
+    </section>
+    <section class="sec" id="about">
+      <h2 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+        Tentang Kami
+      </h2>
+      <p data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+        Berdiri sejak tahun 2008, kami telah melayani kebutuhan pelanggan dalam
+        pengeboran air, berawal dari teknik pengeboran manual hingga sekarang kami menggunakan teknologi bor mesin
+        modern yang kami gunakan saat ini. Dengan pengalaman lebih dari satu
+        dekade, kami terus berinovasi untuk memberikan hasil terbaik bagi
+        pelanggan kami.
+        <br /><br />Kami juga menyediakan layanan perbaikan dan instalasi mesin
+        air, mulai dari mesin air dangkal berdaya 125 watt hingga mesin jetpump
+        berdaya 500 watt. Setiap pekerjaan kami sesuaikan dengan tingkat
+        kesulitan dan kondisi lokasi, termasuk faktor transportasi untuk
+        mencapai tempat Anda. Komitmen kami adalah memberikan pelayanan yang
+        profesional, cepat, dan terjamin kualitasnya untuk memenuhi kebutuhan
+        air bersih Anda.
+      </p>
+    </section>
+    <script>
+      let wave1 = document.getElementById("wave1");
+      let wave2 = document.getElementById("wave2");
+      let wave3 = document.getElementById("wave3");
+      let wave4 = document.getElementById("wave4");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+
+        wave1.style.backgroundPositionX = 400 + value * 4 + "px";
+        wave2.style.backgroundPositionX = 300 + value * -4 + "px";
+        wave3.style.backgroundPositionX = 200 + value * 2 + "px";
+        wave4.style.backgroundPositionX = 100 + value * -2 + "px";
+      });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
