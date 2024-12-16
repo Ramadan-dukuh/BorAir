@@ -257,12 +257,12 @@
     padding: 100px 20px;
     text-align: center;
     background-color: var(---primary-color);
-    height: 100vh;
-  }
+    color: var(---secondary-color);
+  }  
   
-  .section-title {
+  .section-title{
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
     color: var(---secondary-color);
   }
   
@@ -311,7 +311,7 @@
   }
   
   .service-card:hover .service-title {
-    color: #3586ff; /* Ganti warna judul saat hover */
+    color: var(---primary-color); /* Ganti warna judul saat hover */
   }
   
   /* Description Styling */
@@ -325,3 +325,164 @@
   .service-card:hover .service-description {
     color: #333; /* Sedikit lebih gelap untuk kontras */
   }
+  /* Section Styling */
+.gallery {
+  padding: 50px 20px;
+  text-align: center;
+  background: var(---secondary-color);
+}
+
+
+/* Gallery Container */
+.gallery-container {
+    column-count: 3; /* Jumlah kolom */
+    column-gap: 15px; /* Jarak antar kolom */
+  }
+  
+  .gallery-item {
+    break-inside: avoid; /* Hindari pemisahan elemen */
+    margin-bottom: 15px;
+    padding: 20px;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    display: block;
+    border-radius: 10px; /* Opsional, agar sudut gambar lebih lembut */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title-gallery{
+    font-size: 2.5rem;
+    margin-bottom: 30px; 
+    color: var(---primary-color);
+  }
+/* Gallery Images */
+
+
+.gallery-item:hover .gallery-image {
+transform: scale(1.1);
+  filter: brightness(0.9);
+  box-shadow: 0 0 15px 5px var(---secondary-color);
+}
+
+/* Ripple Effect on Hover */
+/* .gallery-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 50%);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+} */
+
+.gallery-item:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+/* General Footer Styles */
+#footer {
+    background-color: var(---primary-color); /* Warna latar belakang primary */
+    color: var(---secondary-color); /* Warna teks secondary */
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+}
+
+#footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Column 1: Contact */
+.column-1 {
+    text-align: center;
+}
+
+.column-1 .logo h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(---secondary-color); /* Warna teks secondary */
+}
+
+.column-1 .owner-info {
+    margin-top: 15px;
+}
+
+.column-1 .owner-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    border: 2px solid var(---secondary-color); /* Tambahan bingkai untuk estetika */
+}
+
+.column-1 .contact-details {
+    margin-top: 10px;
+}
+
+.column-1 .whatsapp {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background: #25D366;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 1em;
+    transition: transform 0.3s ease;
+}
+
+.column-1 .whatsapp:hover {
+    transform: scale(1.1);
+    background: var(---primary-color); /* Efek hover dengan warna terbalik */
+    color: var(---secondary-color);
+}
+
+/* Column 2: Address and Map */
+.column-2 {
+    text-align: center;
+}
+
+.column-2 h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: var(---secondary-color); /* Warna teks secondary */
+}
+
+.column-2 .address {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: var(---secondary-color);
+}
+
+.column-2 .address i {
+    margin-right: 8px;
+    color: var(---secondary-color);
+}
+
+.column-2 .map iframe {
+    border-radius: 10px;
+    border: 2px solid var(---secondary-color); /* Tambahan bingkai untuk peta */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid var(---secondary-color); /* Garis pemisah warna secondary */
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(---secondary-color);
+}x
+
+.footer-bottom p {
+    color: var(---secondary-color);
+    margin: 0;
+}
