@@ -10,18 +10,23 @@
   <body>
     <header id="header">
       <a href="" class="logo">WaterDrill</a>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">Tentang Kami</a></li>
-        <li><a href="#layanan">Layanan</a></li>
-        <li><a href="#galeri">Galeri</a></li>
-        <li><a href="#footer">Kontak</a></li>
-      </ul>
+      <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <ul class="nav-links">
+          <i class="uil uil-times navCloseBtn"></i>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#footer">Kontak</a></li>
+        </ul>
+      </nav>
     </header>
     <section class="parallax" name="home" id="home">
       <h2 id="text">
         <span>Mau Cari Service Mesin Air dan Pengeboran Air Di</span
         ><br />Jakarta Timur?
+        <a href="#layanan" class="btn">Ini Jawabannya</a>
       </h2>
 
       <div class="wave" id="wave1" style="--i: 1"></div>
@@ -30,10 +35,10 @@
       <div class="wave" id="wave4" style="--i: 4"></div>
     </section>
     <section class="sec" id="about">
-      <h2 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+      <h2 data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
         Tentang Kami
       </h2>
-      <p data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+      <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
         Berdiri sejak tahun 2008, kami telah melayani kebutuhan pelanggan dalam
         pengeboran air, berawal dari teknik pengeboran manual hingga sekarang kami menggunakan teknologi bor mesin
         modern yang kami gunakan saat ini. Dengan pengalaman lebih dari satu
@@ -110,7 +115,7 @@
         <h1>Muhidin</h1>
       </div>
       <div class="owner-info">
-        <img src="path-to-owner-image.jpg" alt="Foto Pemilik" class="owner-photo">
+        <img src="img/foto1.jpg" alt="Foto Pemilik" class="owner-photo">
         <p>Hubungi saya langsung di:</p>
         <div class="contact-details">
           <a href="https://wa.me/your-number" target="_blank" class="contact whatsapp">
@@ -145,6 +150,17 @@
 
 
     <script>
+const nav = document.querySelector(".nav"),
+  navOpenBtn = document.querySelector(".navOpenBtn"),
+  navCloseBtn = document.querySelector(".navCloseBtn");
+
+navOpenBtn.addEventListener("click", () => {
+  nav.classList.add("openNav");
+});
+navCloseBtn.addEventListener("click", () => {
+  nav.classList.remove("openNav");
+});
+
       let wave1 = document.getElementById("wave1");
       let wave2 = document.getElementById("wave2");
       let wave3 = document.getElementById("wave3");
